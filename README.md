@@ -485,20 +485,6 @@ This runs `cd server && node server.js`, which connects to MongoDB and starts Ex
 
 ---
 
-## Screenshots
-
-> *(Add screenshots here after deployment)*
-
-| Page | Description |
-|---|---|
-| Dashboard | Stat cards, task progress chart, overdue list |
-| Projects | Project table with status badges and progress bars |
-| Tasks | Filterable task list with priority and status tags |
-| Team | Member management with role badges |
-| Login / Register | Auth forms with dark/light mode |
-
----
-
 ## License
 
 This project is licensed under the **MIT License**.
