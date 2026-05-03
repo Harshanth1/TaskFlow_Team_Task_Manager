@@ -45,13 +45,13 @@ app.use('/api/projects', projectRoutes);
 app.use('/api/tasks', taskRoutes);
 app.use('/api/teams', teamRoutes);
 
-// Serve frontend in production (single-service Railway deployment)
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/dist/index.html'));
-  });
-}
+// Serve static files from the React build
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// Catch-all: serve index.html for React Router client-side routing
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/dist/index.html'));
+});
 
 // Error handler
 app.use(errorHandler);
